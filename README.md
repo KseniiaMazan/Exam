@@ -9,4 +9,4 @@
 
 **Result**
 
-- [DEMO LINK](https://kseniiamazan.github.io/exam/)
+- [DEMO LINK](https://kseniiamazan.github.io/Exam/)
