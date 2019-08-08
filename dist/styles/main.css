@@ -1,33 +1,28 @@
 .person:hover {
   background: #eee;
   border-radius: 10px;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-name: scale_card;
-          animation-name: scale_card;
+  -webkit-transform: scale(1.32, 1.48);
+          transform: scale(1.32, 1.48);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
   z-index: 1; }
 
 .person:hover .photo__img {
   border-radius: 60px; }
 
+.person:not(:hover) {
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s; }
+
 .person:hover .details__extra-inf {
   visibility: visible; }
 
-@-webkit-keyframes scale_card {
-  0% {
-    -webkit-transform: scale(1.1, 1.24);
-            transform: scale(1.1, 1.24); }
-  100% {
-    -webkit-transform: scale(1.32, 1.48);
-            transform: scale(1.32, 1.48); } }
-
-@keyframes scale_card {
-  0% {
-    -webkit-transform: scale(1.1, 1.24);
-            transform: scale(1.1, 1.24); }
-  100% {
-    -webkit-transform: scale(1.32, 1.48);
-            transform: scale(1.32, 1.48); } }
+.person:not(:hover) .details__extra-inf {
+  visibility: hidden; }
 
 @media (min-width: 750px) {
   body .people {
@@ -88,18 +83,27 @@ body {
     top: 84px;
     right: 10px; }
 
-.details__name {
-  font-size: 20px;
-  line-height: 23px;
-  color: #2f4f4f;
-  text-align: center;
-  margin-bottom: 9px; }
-
-.details__extra-inf {
-  visibility: hidden;
-  font-size: 18px;
-  line-height: 21px;
-  color: #000;
-  text-align: center; }
+.details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .details__name {
+    font-size: 20px;
+    line-height: 23px;
+    color: #2f4f4f;
+    text-align: center; }
+  .details__extra-inf {
+    visibility: hidden;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000;
+    text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
