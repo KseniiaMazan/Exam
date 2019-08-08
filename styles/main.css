@@ -1,14 +1,105 @@
-h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400; }
+.person:hover {
+  background: #eee;
+  border-radius: 10px;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: scale_card;
+          animation-name: scale_card;
+  z-index: 1; }
 
-@font-face {
-  font-family: "Roboto";
-  src: url("../fonts/Roboto-Regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
+.person:hover .photo__img {
+  border-radius: 60px; }
+
+.person:hover .details__extra-inf {
+  visibility: visible; }
+
+@-webkit-keyframes scale_card {
+  0% {
+    -webkit-transform: scale(1.1, 1.24);
+            transform: scale(1.1, 1.24); }
+  100% {
+    -webkit-transform: scale(1.32, 1.48);
+            transform: scale(1.32, 1.48); } }
+
+@keyframes scale_card {
+  0% {
+    -webkit-transform: scale(1.1, 1.24);
+            transform: scale(1.1, 1.24); }
+  100% {
+    -webkit-transform: scale(1.32, 1.48);
+            transform: scale(1.32, 1.48); } }
+
+@media (min-width: 750px) {
+  body .people {
+    padding: 30px 130px 145px; } }
+
+@media (min-width: 1000px) {
+  body .people {
+    padding: 30px 25px 187px; } }
+
+@media (min-width: 1500px) {
+  body .people {
+    padding: 30px 275px 187px; } }
 
 body {
-  background: #eee; }
+  margin: 0;
+  font-family: Arial, sans-serif; }
+
+.people {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 10px;
+  padding: 30px 15px 145px; }
+  .people__person {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 271px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 10px; }
+
+.photo {
+  position: relative; }
+  .photo__img {
+    -webkit-transition: border-radius 1s;
+    transition: border-radius 1s;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    margin-bottom: 8px; }
+  .photo__rank {
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    color: #8b0000;
+    background: #fff;
+    border-radius: 200px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 84px;
+    right: 10px; }
+
+.details__name {
+  font-size: 20px;
+  line-height: 23px;
+  color: #2f4f4f;
+  text-align: center;
+  margin-bottom: 9px; }
+
+.details__extra-inf {
+  visibility: hidden;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
