@@ -1,0 +1,24 @@
+.person:hover {
+  background: #eee;
+  border-radius: 10px;
+  animation-duration: 1s;
+  animation-name: scale_card;
+  z-index: 1;
+}
+
+.person:hover .photo__img {
+  border-radius: 60px;
+}
+
+.person:hover .details__extra-inf {
+  visibility: visible;
+}
+
+@keyframes scale_card {
+  0% {
+    transform: scale(1.1, 1.24 );
+  }
+  100% {
+    transform: scale(1.32, 1.48);
+  }
+}

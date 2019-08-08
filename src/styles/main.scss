@@ -1,7 +1,66 @@
 @import "utils";
-@import "fonts";
-@import "typography";
+@import "./hover";
+@import "./media";
 
 body {
-  background: $c-gray;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.people {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 10px;
+  padding: 30px 15px 145px;
+  &__person {
+    box-sizing: border-box;
+    height: 271px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+  }
+}
+
+.photo {
+  position: relative;
+  &__img {
+    transition: border-radius 1s;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    margin-bottom: 8px;
+  }
+  &__rank {
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    color: #8b0000;
+
+    background: #fff;
+    border-radius: 200px;
+    width: 32px;
+    height: 32px;
+
+    position: absolute;
+    top: 84px;
+    right: 10px;
+  }
+}
+
+.details {
+  &__name {
+    font-size: 20px;
+    line-height: 23px;
+    color: #2f4f4f;
+    text-align: center;
+    margin-bottom: 9px;
+  }
+  &__extra-inf {
+    visibility: hidden;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000;
+    text-align: center;
+  }
 }
